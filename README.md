@@ -14,8 +14,8 @@ Comming soon. ```(kinda empty in here...)```
 
 ## Features
 Not developed yet...
-- Maybe discord integartion
-- maybe multilingual
+- Maybe discord integartion.
+- maybe multilingual.
 
 Only time will tell.
 
@@ -27,4 +27,4 @@ Only time will tell.
 ---
 
 ## License
-All rights reserved
+All rights reserved.
