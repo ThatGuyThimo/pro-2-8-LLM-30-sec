@@ -21,6 +21,11 @@ Only time will tell.
 
 ---
 
+## API
+Described here are the available endpoints for the API
+- /joke | Type: GET (Tells a joke) TEMP
+- /chat | Type: POST ```{ "message": "request" }``` (Gives response to the given message) TEMP
+
 ## Contributer
 - [ThatGuyThimo](https://github.com/ThatGuyThimo)
 
