@@ -20,7 +20,6 @@ async function joke() {
 }
 
 async function chat(req) {
-    console.log(req)
     const res = await model.invoke(req)
     return res.content 
 }

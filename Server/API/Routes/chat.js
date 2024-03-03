@@ -13,7 +13,9 @@ router.post('/', async (req, res) => {
     if (!req.body.message) {
         res.status(400).send('Message is required')
     } else {
-        res.send(await chat(req.body.message))
+        console.log(req.body.message)
+        // res.send(await chat(req.body.message)).status(200)
+        res.send("test message").status(200)
     }
 })
 
