@@ -58,7 +58,7 @@ export default {
     },
     async getCard() {
       if (!this.isCounting) {
-        await fetch('http://localhost:3010/card', {
+        await fetch('https://thimodehaan.com:3000/card', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ export default {
       if (this.message !== '') {
         this.addMessage()
         // Send message to server
-        await fetch('https://localhost:3010/chat', {
+        await fetch('https://thimodehaan.com:3000/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
