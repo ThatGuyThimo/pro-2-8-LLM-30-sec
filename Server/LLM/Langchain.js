@@ -24,4 +24,11 @@ async function chat(req) {
     return res.content 
 }
 
+async function card(req) {
+    const res = await model.invoke(req)
+    return res.content 
+}
+
+
+
 export { joke, chat }

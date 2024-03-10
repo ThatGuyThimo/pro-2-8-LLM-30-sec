@@ -1,7 +1,5 @@
 <script>
 export default {
-  // Properties returned from data() become reactive state
-  // and will be exposed on `this`.
   data() {
     return {
       messages: [],
@@ -9,8 +7,6 @@ export default {
     }
   },
 
-  // Methods are functions that mutate state and trigger updates.
-  // They can be bound as event handlers in templates.
   methods: {
     async sendMessage() {
       if (this.message !== '') {
@@ -35,9 +31,6 @@ export default {
     }
   },
 
-  // Lifecycle hooks are called at different stages
-  // of a component's lifecycle.
-  // This function will be called when the component is mounted.
   mounted() {
     
   }

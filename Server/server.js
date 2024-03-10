@@ -7,16 +7,17 @@ dotenv.config({path: '.env'})
 
 import { router as jokeRoute } from './API/Routes/joke.js'
 import { router as chatRoute } from './API/Routes/chat.js'
+import { router as cardRoute } from './API/Routes/card.js'
 
 const app = express()
 const httpPort = process.env.HTTP_PORT
-// const httpsPort = process.env.HTTPS_PORT
+const httpsPort = process.env.HTTPS_PORT
 
-// const options = {
-//   key: fs.readFileSync("./data/certs/api.theziver.com.privkey.pem"),
-//   cert: fs.readFileSync("./data/certs/api.theziver.com.pem"),
-//   passphrase: process.env.PHASSPHRASE
-// }
+const options = {
+  key: fs.readFileSync("./Certs/thimodehaankey.pem"),
+  cert: fs.readFileSync("./Certs/thimodehaan.pem"),
+  passphrase: process.env.PHASSPHRASE
+}
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -32,12 +33,13 @@ app.use((req, res, next) => {
 
 app.use('/joke', jokeRoute)
 app.use('/chat', chatRoute)
+app.use('/card', cardRoute)
 
 
 app.listen(httpPort, () => {
   console.log(`Http listening on port ${httpPort}`)
 })
 
-// https.createServer(options, app).listen(httpsPort, () => {
-//   console.log(`Https listening on port ${httpsPort}`)
-// })
+https.createServer(options, app).listen(httpsPort, () => {
+  console.log(`Https listening on port ${httpsPort}`)
+})
